@@ -22,11 +22,14 @@ section{
 
 .team-list{
     margin-top: 30px;
-    // margin-top: 50px;
 
-    // &.flexbox {
-    //     flex-wrap: wrap;
-    // }
+    @include for-size(desktop) {
+        margin-top: 50px;
+    }
+
+    &.flexbox {
+        flex-wrap: wrap;
+    }
     
     & .secondary-title {
         margin: 0;
@@ -52,7 +55,6 @@ section{
         letter-spacing: 0.03em;
         text-align: center;
     }
-    
 }
 
 .team-list .item {
@@ -68,10 +70,38 @@ section{
     //     margin-top: 30px;
     // }
 
-
-
-
     &:not(:last-child){
         margin-bottom: 20px;
+
+        @include for-size(tablet-landscape) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include for-size(tablet-landscape) {
+		width: calc((100% - 30px) / 2);
+	}
+
+	@include for-size(desktop) {
+		width: calc((100% - 30px * 3) / 4);
+	}
+    
+    &:not(:nth-child(2n)) {
+        @include for-size(tablet-landscape) {
+            margin-right: 30px;
+        }
+    }
+
+    &:nth-child(-n + 2) {
+        @include for-size(tablet-landscape) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &:not(:last-child){
+        @include for-size(desktop) {
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
     }
 }

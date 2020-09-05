@@ -29,16 +29,41 @@ footer .container {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
+    @include for-size(tablet-landscape) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    
     
     // &.flexbox {
     //     align-items: baseline;
     // }
 }
 
-// .footer-nav {
-//     width: calc((100% - 3 * 30px) / 4);
-//     margin-right: 30px;
-// }
+.footer-nav {
+
+    @include for-size(tablet-landscape) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+        width: calc((100% - 3 * 30px) / 4);
+        margin-right: 30px;
+    }
+}
+
+.footer-social {
+    @include for-size(tablet-landscape) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+        width: calc((100% - 3 * 30px) / 4);
+        margin-right: 30px;
+    }
+}
 
 .address {
     margin-top: 20px;
@@ -91,7 +116,7 @@ footer .social-networks-link{
 .mailing {
     // width: calc((100% - 30px) / 2);
     margin-top: 60px;
-    // margin-bottom: 20px;
+    
     margin-left: auto;
     margin-right: auto;
     

@@ -1,8 +1,8 @@
-// .advantages{
-//     & .container {
-//         padding-bottom: 0;
-//     }
-// }
+.advantages .container {
+    @include for-size(desktop) {
+		padding-bottom: 0;
+	}
+}
 
 .advantages-list{
     & .secondary-title {
@@ -26,12 +26,24 @@
         line-height: 1.71;
         letter-spacing: 0.03em;
     }
+
+    @include for-size(tablet-landscape) {
+		flex-wrap: wrap;
+	}
+
+	@include for-size(desktop) {
+		flex-wrap: nowrap;
+	}
 }
 
 .advantages-item {
     
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 30px;
+
+        @include for-size(tablet-landscape) {
+            margin-bottom: 0;
+        }
     }
 
     &::before{
@@ -45,13 +57,32 @@
         background-position: center;
     }
 
+    @include for-size(tablet-landscape) {
+		width: calc((100% - 30px) / 2);
+	}
 
-
-    // width: calc((100% - 30px * 3) / 4);
+	@include for-size(desktop) {
+		width: calc((100% - 30px * 3) / 4);
+	}
     
-    // &:not(:last-child) {
-    //     margin-right: 30px;
-    // }
+    &:not(:nth-child(2n)) {
+        @include for-size(tablet-landscape) {
+            margin-right: 30px;
+        }
+    }
+
+    &:nth-child(-n + 2) {
+        @include for-size(tablet-landscape) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &:not(:last-child){
+        @include for-size(desktop) {
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+    }
 }
 
 @each $advantageNumber in $advantages-icons {
