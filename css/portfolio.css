@@ -456,8 +456,8 @@ img {
 }
 
 .logo {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: #000000;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -529,9 +529,32 @@ header {
   border-bottom: 1px solid #ECECEC;
 }
 
-header .container {
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+  }
+}
+
+header .container.flexbox {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  header .container.flexbox {
+    display: none;
+  }
+}
+
+header .container.mobile-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  header .container.mobile-menu {
+    display: none;
+  }
 }
 
 .navigation {
@@ -544,7 +567,7 @@ header .container {
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav {
+  .site-nav.flexbox {
     display: none;
   }
 }
@@ -558,13 +581,19 @@ header .container {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav {
+    margin-bottom: 60px;
+  }
+}
+
 .site-nav-item {
   color: #212121;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+  font-size: 18px;
+  line-height: 1.17;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,8 +606,23 @@ header .container {
   height: 100%;
 }
 
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
+@media (min-width: 768px) {
+  .site-nav-item {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -602,6 +646,16 @@ header .container {
   color: #2196f3;
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav .link.current {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-bottom: 12px;
+    position: relative;
+  }
+}
+
 .site-nav .link.current::after {
   content: "";
   position: absolute;
@@ -616,12 +670,6 @@ header .container {
           transform: translate(0, 25%);
 }
 
-@media screen and (max-width: 767px) {
-  .contacts {
-    display: none;
-  }
-}
-
 .contacts.flexbox {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -631,6 +679,12 @@ header .container {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts.flexbox {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -650,9 +704,28 @@ header .container {
   color: #757575;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+@media (min-width: 768px) {
+  .contacts-item {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts-item {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -687,6 +760,70 @@ header .container {
 
 .contacts-item .link:hover .contacts-item-icon {
   fill: #2196f3;
+}
+
+.mobile-menu .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.icon-menu:hover, .icon-menu:focus {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.icon-cross:hover, .icon-cross:focus {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.menu-window {
+  display: none;
+  z-index: 999;
+  overflow: auto;
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.menu-window.is-open {
+  display: block;
+  text-align: center;
+  overflow-y: scroll;
 }
 
 .button-list button {
@@ -837,9 +974,9 @@ header .container {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 84px;
-  padding-right: 40px;
-  padding-bottom: 81px;
+  padding-top: 77px;
+  padding-right: 24px;
+  padding-bottom: 77px;
   padding-left: 24px;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
@@ -859,7 +996,6 @@ header .container {
 @media (min-width: 768px) {
   .project-overlay {
     padding-top: 49px;
-    padding-right: 24px;
     padding-bottom: 49px;
   }
 }

@@ -50,6 +50,61 @@
                 </li>
             </ul>
         </div>
+
+        <div class="container mobile-menu">
+            <nav class="navigation">
+                <a href="./index.html" class="logo" lang="en">
+                    <span class="logo-specific">Web</span>
+                    Studio
+                </a>
+
+                <button type="button" 
+                class="menu-button" 
+                data-menu-button
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./sprite.svg#icon-burger"></use>
+                        <use class="icon-cross" href="./sprite.svg#icon-close-burger"></use>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="menu-window" id="mobile-menu" data-menu>
+                <ul class="site-nav">
+                    <li class="site-nav-item">
+                        <a href="./index.html" class="link current">Студия</a>
+                    </li>
+                    <li class="site-nav-item">
+                        <a href="./portfolio.html" class="link" target="_blank" rel="noopener">Портфолио</a>
+                    </li>
+                    <li class="site-nav-item">
+                        <a href="" class="link" target="_blank" rel="noopener">Контакты</a>
+                    </li>
+                </ul>
+    
+                <ul class="contacts">
+                    <li class="contacts-item">
+                        <a href="mailto:info@devstudio.com" class="link mail">
+                            <svg class="contacts-item-icon" width="16" height="12">
+                                <use href="./sprite.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+    
+                    <li class="contacts-item">
+                        <a href="tel:+380961111111" class="link phone">
+                            <svg class="contacts-item-icon" width="10" height="16">
+                                <use href="./sprite.svg#icon-phone"></use>
+                            </svg>
+                            +380961111111
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -403,138 +458,139 @@
     </main>
 
     <!-- футер -->
-		<footer>
-			<div class="container flexbox">
-				<div class="footer-nav">
-					<a href="" class="logo">
-						<span class="logo-specific">Web</span>
-						<span class="logo-specific white">Studio</span>
-					</a>
+    <footer>
+        <div class="container flexbox">
+            <div class="footer-nav">
+                <a href="" class="logo">
+                    <span class="logo-specific">Web</span>
+                    <span class="logo-specific white">Studio</span>
+                </a>
 
-					<address class="address">
-						г. Киев, пр-т Леси Украинки, 26<br />
-						<span>info@example.com</span> <br />
-						<span>+38 099 111 11 11</span>
-					</address>
-				</div>
+                <address class="address">
+                    г. Киев, пр-т Леси Украинки, 26<br />
+                    <span>info@example.com</span> <br />
+                    <span>+38 099 111 11 11</span>
+                </address>
+            </div>
 
-				<div class="footer-social">
-					<b>Присоединяйтесь</b>
+            <div class="footer-social">
+                <b>Присоединяйтесь</b>
 
-					<div class="networks">
-						<ul class="social-networks flexbox">
-							<li class="social-networks-item">
-								<a href="" aria-label="Ссылка на Instagram" class="social-networks-link">
-									<svg class="social-icon"  width="20" height="20">
-										<use href="./sprite.svg#icon-instagram"></use>
-									</svg>
-								</a>
-							</li>
+                <div class="networks">
+                    <ul class="social-networks flexbox">
+                        <li class="social-networks-item">
+                            <a href="" aria-label="Ссылка на Instagram" class="social-networks-link">
+                                <svg class="social-icon"  width="20" height="20">
+                                    <use href="./sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
 
-							<li class="social-networks-item">
-								<a href="" aria-label="Ссылка на Twitter" class="social-networks-link">
-									<svg class="social-icon"  width="20" height="20">
-										<use href="./sprite.svg#icon-twitter"></use>
-									</svg>
-								</a>
-							</li>
+                        <li class="social-networks-item">
+                            <a href="" aria-label="Ссылка на Twitter" class="social-networks-link">
+                                <svg class="social-icon"  width="20" height="20">
+                                    <use href="./sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
 
-							<li class="social-networks-item">
-								<a href="" aria-label="Ссылка на Facebook" class="social-networks-link">
-									<svg class="social-icon"  width="20" height="20">
-										<use href="./sprite.svg#icon-facebook"></use>
-									</svg>
-								</a>
-							</li>
+                        <li class="social-networks-item">
+                            <a href="" aria-label="Ссылка на Facebook" class="social-networks-link">
+                                <svg class="social-icon"  width="20" height="20">
+                                    <use href="./sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
 
-							<li class="social-networks-item">
-								<a href="" aria-label="Ссылка на LinkedIn" class="social-networks-link">
-									<svg class="social-icon"  width="20" height="20">
-										<use href="./sprite.svg#icon-linkedin"></use>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+                        <li class="social-networks-item">
+                            <a href="" aria-label="Ссылка на LinkedIn" class="social-networks-link">
+                                <svg class="social-icon"  width="20" height="20">
+                                    <use href="./sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-				<div class="mailing">
-					<b>Подпишитесь на рассылку</b>
+            <div class="mailing">
+                <b>Подпишитесь на рассылку</b>
 
-					<form class="footer-form">
-						<input type="email" name="mail" id="" placeholder="E-mail" class="footer-form-input">
+                <form class="footer-form">
+                    <input type="email" name="mail" id="" placeholder="E-mail" class="footer-form-input">
 
-						<button type="submit" href="" class="button">Подписаться</button>
-					</form>
-				</div>
-			</div>
-        </footer>
+                    <button type="submit" href="" class="button">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </footer>
         
     <!-- модальное окно -->
-		<div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
 
-			<div class="modal">
-				<button type="button" class="modal-icon" data-modal-close>
-					<svg class="close-icon" width="11" height="11">
-						<use href="./sprite.svg#icon-close-cross"></use>
-					</svg>
-				</button>
+        <div class="modal">
+            <button type="button" class="modal-icon" data-modal-close>
+                <svg class="close-icon" width="11" height="11">
+                    <use href="./sprite.svg#icon-close-cross"></use>
+                </svg>
+            </button>
 
-				<h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
 
-				<form class="modal-form">
-					<label class="form-label">Имя</label>
-						<div class="form-field">
-								
-							<input type="text" name="Имя" placeholder=" " class="form-input">
+            <form class="modal-form">
+                <label class="form-label">Имя</label>
+                    <div class="form-field">
+                            
+                        <input type="text" name="Имя" placeholder=" " class="form-input">
 
-							<svg class="form-icon" width="18" height="18">
-								<use href="./sprite.svg#icon-form-name"></use>
-							</svg>
-						</div>
-					</label>
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./sprite.svg#icon-form-name"></use>
+                        </svg>
+                    </div>
+                </label>
 
-					<label class="form-label">Телефон</label>
-						<div class="form-field">
-								
-							<input type="tel" name="Телефон" placeholder=" " class="form-input">
+                <label class="form-label">Телефон</label>
+                    <div class="form-field">
+                            
+                        <input type="tel" name="Телефон" placeholder=" " class="form-input">
 
-							<svg class="form-icon" width="18" height="18">
-								<use href="./sprite.svg#icon-form-phone"></use>
-							</svg>
-						</div>
-					</label>
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./sprite.svg#icon-form-phone"></use>
+                        </svg>
+                    </div>
+                </label>
 
-					<label class="form-label">Почта</label>
-						<div class="form-field">
-								
-							<input type="email" name="Почта" placeholder=" " class="form-input">
+                <label class="form-label">Почта</label>
+                    <div class="form-field">
+                            
+                        <input type="email" name="Почта" placeholder=" " class="form-input">
 
-							<svg class="form-icon" width="18" height="18">
-								<use href="./sprite.svg#icon-form-mail"></use>
-							</svg>
-						</div>
-					</label>
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./sprite.svg#icon-form-mail"></use>
+                        </svg>
+                    </div>
+                </label>
 
-					<label class="form-label comment">Комментарий
-						<textarea name="comment" rows="5" placeholder="Введите текст" class="form-comment"></textarea>
-					</label>
+                <label class="form-label comment">Комментарий
+                    <textarea name="comment" rows="5" placeholder="Введите текст" class="form-comment"></textarea>
+                </label>
 
-					<label class="form-checkbox">
-						<input type="checkbox" name="checkbox" value=" " placeholder=" " class="checkbox">
-						
-						<span class="icon-checkbox"></span>
-						
-						<span class="agreement">
-							Соглашаюсь с рассылкой и принимаю <a href="" class="conditionals">Условия договора</a> 
-						</span>
-					</label>
+                <label class="form-checkbox">
+                    <input type="checkbox" name="checkbox" value=" " placeholder=" " class="checkbox">
+                    
+                    <span class="icon-checkbox"></span>
+                    
+                    <span class="agreement">
+                        Соглашаюсь с рассылкой и принимаю <a href="" class="conditionals">Условия договора</a> 
+                    </span>
+                </label>
 
-					<button type="submit" class="button form-button">Отправить</button>
-				</form>
-			</div>
-		</div>
+                <button type="submit" class="button form-button">Отправить</button>
+            </form>
+        </div>
+    </div>
 
-	<script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
