@@ -18,7 +18,6 @@ footer{
         }
     }
 
-
     & .social-icon{
         fill: $tretiary-text-color;
     }
@@ -41,21 +40,9 @@ footer .container {
         align-items: baseline;
         text-align: left;
     }
-
-    // @media screen and (max-width: 1199){
-    //     flex-wrap: wrap;
-    //     justify-content: space-between;
-    // }
-
-    // @include for-size(desktop) {
-    //     align-items: baseline;
-    // }
 }
 
-
-
 .footer-nav {
-
     @include for-size(tablet-landscape) {
         width: calc((100% - 30px) / 2);
     }
@@ -206,7 +193,3 @@ footer .social-networks-link{
         margin-left: 10px;
     }
 }
-
-
-
-

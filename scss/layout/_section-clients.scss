@@ -3,12 +3,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 30px;
-	// margin-top: 50px;
     text-decoration: none; 
     
     & a:hover,
     & a:focus {
         color: $accent-color;
+    }
+
+    @include for-size(desktop) {
+        margin-top: 50px;
     }
 }
 
@@ -30,10 +33,6 @@
 		width: calc((100% - 2* 30px) / 3);
 	}
 
-	@include for-size(desktop) {
-		width: calc((100% - 5 * 30px) / 6);
-	}
-
     &:not(:nth-child(3n)) {
         @include for-size(tablet-landscape) {
             margin-right: 30px;
@@ -45,6 +44,10 @@
             margin-bottom: 30px;
         }
     }
+
+    @include for-size(desktop) {
+		width: calc((100% - 5 * 30px) / 6);
+	}
 
     &:not(:last-child){
         @include for-size(desktop) {

@@ -1,18 +1,13 @@
 .social-networks {
     display: flex;
     flex-wrap: no-wrap;
-
-    // for mobile
+    
     justify-content: center;  
-    
-    
 
-
-    //     &:hover,
-    //     &:focus{
-    //         color: $accent-color;
-    //     }
-    // }
+    &:hover,
+    &:focus{
+        color: $accent-color;
+    }
 }
 
 .social-networks-link{
