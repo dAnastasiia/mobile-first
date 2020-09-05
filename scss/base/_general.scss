@@ -1,0 +1,88 @@
+*{
+	outline: 2px solid tomato;
+}
+
+
+body {
+	margin: 0;
+	color: $primary-text-color;
+	background-color: $primary-bg-color;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 60px;
+	padding-right: 15px;
+	padding-bottom: 60px;
+	padding-left: 15px;
+
+	@include for-size(tablet-portrait) {
+		width: 480px;
+	}
+
+	@include for-size(tablet-landscape) {
+		width: 768px;
+	}
+
+	@include for-size(desktop) {
+		width: 1200px;
+
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
+}
+
+// .flexbox {
+// 	@include for-size(tablet-landscape) {
+// 		display: flex;
+// 	}
+// }
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.main-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+
+	color: $title-text-color;
+
+	font-family: $font-general;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.17;
+	letter-spacing: 0.03em;
+
+	@include for-size(desktop) {
+		font-size: 36px;
+		line-height: 1.17;
+	}
+}
+
+.secondary-title {
+	margin-top: 30px;
+	margin-bottom: 0;
+}

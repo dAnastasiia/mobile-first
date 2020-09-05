@@ -1,0 +1,53 @@
+section.activities{
+    display: none;
+}
+
+
+.activities-list{
+    margin-top: 50px;
+
+    & a{
+        text-decoration: none;
+    }
+    
+    & .secondary-title {
+        margin: 0;
+        
+        color: $tretiary-text-color;
+    
+        font-family: $font-general;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    
+        text-decoration: none;
+    }
+}
+
+.activities-item {
+	position: relative;
+
+	// width: calc((100% - 30px * 2) / 3);
+    text-align: center;
+    
+    // &:not(:last-child) {
+    //     margin-right: 30px;
+    // }
+}
+
+.activities-overlay{
+	position: absolute;
+
+	padding-top: 27px;
+	padding-bottom: 27px;
+
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 70px;
+
+	background-color: rgba(47, 48, 58, 0.8);
+}

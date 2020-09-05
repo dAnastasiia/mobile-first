@@ -1,0 +1,47 @@
+.logo{
+	// padding-top: 25px;
+	// padding-right: 85px;
+    // padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+	color: $secondary-text-color;
+
+	font-family: $font-logo;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+
+    text-decoration: none;
+    
+    &:hover,
+    &:focus{
+        cursor: auto;
+    }
+
+    footer &{
+        padding: 0;
+    }
+
+    @include for-size(tablet-landscape) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        padding-right: 88px;
+    }
+
+    @include for-size(desktop) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 93px;
+    }
+}
+
+.logo-specific{
+    color: $accent-color;
+
+    &.white{
+        color: $tretiary-text-color;
+    }
+}
+

@@ -1,0 +1,27 @@
+.button {
+	display: inline-flex;
+
+	padding: 10px 32px;
+	min-width: 200px;
+	max-height: 50px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	align-items: center;
+
+	color: $tretiary-text-color;
+	background-color: $accent-color;
+
+	text-decoration: none;
+
+	font-family: $font-general;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+    letter-spacing: 0.06em;
+    
+    &:hover,
+    &:focus{
+        cursor: pointer;
+	}
+}
