@@ -1,5 +1,7 @@
 section.activities{
-    display: none;
+    @media screen and (max-width: 1199px){
+        display: none;
+    }
 }
 
 
@@ -29,12 +31,12 @@ section.activities{
 .activities-item {
 	position: relative;
 
-	// width: calc((100% - 30px * 2) / 3);
+	width: calc((100% - 30px * 2) / 3);
     text-align: center;
     
-    // &:not(:last-child) {
-    //     margin-right: 30px;
-    // }
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .activities-overlay{

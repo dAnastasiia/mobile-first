@@ -12,10 +12,12 @@
 footer{
     background-color: $footer-bg-color;
 
+    & .social-networks{
+        @include for-size(desktop) {
+            justify-content: start;
+        }
+    }
 
-    // & .networks {
-    //     margin-top: 20px;
-    // }
 
     & .social-icon{
         fill: $tretiary-text-color;
@@ -35,26 +37,25 @@ footer .container {
         justify-content: space-between;
     }
 
-    
-    
-    // &.flexbox {
+    @include for-size(desktop) {
+        align-items: baseline;
+        text-align: left;
+    }
+
+    // @media screen and (max-width: 1199){
+    //     flex-wrap: wrap;
+    //     justify-content: space-between;
+    // }
+
+    // @include for-size(desktop) {
     //     align-items: baseline;
     // }
 }
 
+
+
 .footer-nav {
 
-    @include for-size(tablet-landscape) {
-        width: calc((100% - 30px) / 2);
-    }
-
-    @include for-size(desktop) {
-        width: calc((100% - 3 * 30px) / 4);
-        margin-right: 30px;
-    }
-}
-
-.footer-social {
     @include for-size(tablet-landscape) {
         width: calc((100% - 30px) / 2);
     }
@@ -83,18 +84,31 @@ footer .container {
         margin-top: 9px;
         color: rgba(255, 255, 255, 0.6);
     }
+
+    @include for-size(tablet-landscape) {
+        margin-bottom: 0;
+    }
 }
 
-// .social-networks{
-//     @include for-size(desktop) {
-//         padding: 20px;
-//     }
-// }
+.footer-social {
+    @include for-size(tablet-landscape) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+        width: calc((100% - 3 * 30px) / 4);
+        margin-right: 30px;
+    }
+}
 
 .footer-social > b{
     @extend %footer-title;
     display: inline-block;
     margin-bottom: 20px;
+
+    @include for-size(desktop) {
+        text-align: left;
+    }
 }
 
 footer .social-networks-link{
@@ -114,7 +128,6 @@ footer .social-networks-link{
 }
 
 .mailing {
-    // width: calc((100% - 30px) / 2);
     margin-top: 60px;
     
     margin-left: auto;
@@ -125,21 +138,22 @@ footer .social-networks-link{
         display: inline-block;
         margin-bottom: 20px;
     }
+
+    @include for-size(desktop) {
+        width: calc((100% - 30px) / 2);
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
 }
 
 .footer-form{
-	// display: flex;
-	// justify-content: space-between;
-    // align-items: center;
-    // margin-bottom: 20px;
     
     &-input{
-        // width: 358px;
         width: 100%;
         max-width: 450px;
         max-height: 50px;
-    
-        // margin-right: 12px;
+        
         margin-bottom: 20px;
     
         padding-top: 15px;
@@ -158,6 +172,17 @@ footer .social-networks-link{
         letter-spacing: 0.03em;
     
         color: rgba(255, 255, 255, 0.6);
+
+        @include for-size(desktop) {
+            margin-right: 12px;
+            margin-bottom: 0;
+        }
+    }
+
+    @include for-size(desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -166,8 +191,6 @@ footer .social-networks-link{
 	padding-right: 28px;
 	padding-bottom: 10px;
 	padding-left: 29px;
-	// align-items: center;
-    // justify-content: start;
     
     &::after{
         content: "";

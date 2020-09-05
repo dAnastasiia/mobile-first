@@ -28,12 +28,21 @@
 	padding: 40px;
 
 	width: 100%;
-	max-width: 528px;
-	height: 581px;
+	
 
 	background-color: $primary-bg-color;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+	border-radius: 4px;
+	
+	@media screen and (max-width: 1199px){
+		max-width: 450px;
+		height: 610px;
+	}
+
+	@include for-size(desktop) {
+        max-width: 528px;
+		height: 581px;
+    }
 
     &-title{
         margin: 0;
@@ -43,9 +52,13 @@
         font-family: $font-general;
         font-weight: 700;
         font-size: 20px;
-        line-height: 1.15;
+        line-height: 1.5;
         text-align: center;
-        letter-spacing: 0.03em;
+		letter-spacing: 0.03em;
+		
+		@include for-size(desktop) {
+			line-height: 1.15;
+		}
     }
     
     .backdrop.is-hidden &{
@@ -234,10 +247,15 @@
 
 	font-family: $font-general;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.17;
 	letter-spacing: 0.03em;
 	text-align: center;
+
+	@include for-size(desktop) {
+		font-size: 14px;
+		line-height: 1.71;
+	}
 }
 
 .conditionals{
@@ -254,4 +272,6 @@
 
 	padding-right: 55px;
 	padding-left: 55px;
+
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
